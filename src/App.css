@@ -1,8 +1,27 @@
 .App {
-  text-align: center;
+  display: grid;
+  grid-template-areas: "nav nav nav nav"
+                       "prl prl prl bsk";
 }
 
-.App-logo {
+.SimpleNav {
+  grid-area: nav;
+  background-color: aquamarine;
+}
+
+.ProductList {
+  grid-area: prl;
+  background-color: azure;
+  display: grid;
+  grid-template: auto / 1fr 1fr 1fr;
+}
+
+.Basket {
+  grid-area: bsk;
+  background-color: bisque;
+}
+
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -11,7 +30,7 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
+} */
 
 .App-header {
   background-color: #282c34;
@@ -23,7 +42,7 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
+/* 
 .App-link {
   color: #61dafb;
 }
@@ -35,4 +54,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
