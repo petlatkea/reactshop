@@ -1,14 +1,11 @@
 import Product from './Product.js';
 
-function ProductList() {
+function ProductList({products,addToBasket}) {
+  const productlist = products.map( product => <Product product={product} key={product.id} addToBasket={addToBasket}></Product> );
+
   return (
     <div className="ProductList">
-        <Product title="Shirt"></Product>  
-        <Product title="Shoes"></Product>  
-        <Product title="Trousers"></Product>  
-        <Product title="Socks"></Product>  
-        <Product title="Tie"></Product>  
-        <Product title="Pocket Protector"></Product>  
+        {productlist}
     </div>
   )
 }

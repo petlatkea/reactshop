@@ -42,6 +42,16 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+.counter {
+  display: grid;
+  grid-template: auto / 3em 3em 3em;
+  
+}
+
+.counter input[type="text"] {
+  text-align: right;
+}
+
 /* 
 .App-link {
   color: #61dafb;

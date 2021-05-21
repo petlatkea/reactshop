@@ -1,8 +1,21 @@
+import {useState} from "react";
 
-function MyBasket() {
+function MyBasket({basket}) {
   return(
-    <p>Displays #items and price</p>
+    <>
+    <ul>
+      {basket.map((item)=> <BasketItem {...item}></BasketItem>  )}
+    </ul>
+    <p>You have {basket.length} item{basket.length!==1?"s":""} in the basket.</p>
+    </>
   )
+}
+
+function BasketItem(props) {
+  console.log(props);
+  return(
+    <li>{props.count} {props.product.productdisplayname}</li>
+  );
 }
 
 export default MyBasket;
